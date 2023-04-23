@@ -1,0 +1,46 @@
+.icon{
+    color :white
+
+}
+/* #####################nav1################## */
+.nav1 {
+    background: linear-gradient(to top, #333333, #dd1818);
+}
+
+
+/* ######################Nav2###################### */
+.drawer_icon{
+    text-align: center;
+    border: 1px solid #dc965a;
+    padding: 5px 0px;
+    border-radius: 20px;
+    color:#dc965a;
+    width: 150px;
+    cursor: pointer;
+    /* transition: all 2s ease-in;
+    transform: translateX(-20px); */
+    /* animation-fill-mode: both;
+    animation-delay: 1s;
+    */
+
+    
+
+}
+/* @keyframes react-reveal-373047938003920-2{
+    0% {
+        
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        
+        left: 200px;
+        top: 0px;
+    }
+
+} */
+.drawer_icon:hover{
+    color: black;
+    background-color: #ef5350;
+}
