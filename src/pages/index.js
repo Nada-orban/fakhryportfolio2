@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Landing from '../../Components/Landing'
 import About from '../../Components/About'
+import Skill from '../../Components/Skill'
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Landing />
       <About />
+      <Skill />
 
     </>
   )
