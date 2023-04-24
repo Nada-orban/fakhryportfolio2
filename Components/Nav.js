@@ -34,11 +34,12 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { LogoDev } from '@mui/icons-material';
 import Image from 'next/image';
 import Styles from '../src/styles/Nav.module.css'
-
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+
 
 
 //hide navbar
@@ -135,74 +136,65 @@ function Nav() {
                 <CssBaseline />
                 {/* <HideOnScroll {...props}> */}
                 <AppBar variant="permanent" sx={{
-                    backgroundColor: 'background.main', color: "text:primary", borderStyle: "none"
+                    background: 'transparent', color: "text:primary", borderStyle: "none"
                 }} className="animate__animated animate__fadeInDown">
                     <Container>
                         <Toolbar>
                             <Box display='flex' flexGrow={1}>
-                                {/* <Typography
-                                        variant="h6"
-                                        component="div"
-                                        sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 3 }}
-                                    >
-                                        NADA
-                                    </Typography> */}
-                                <Box sx={{ flexGrow: 1, display: "block", color: "secondary.main", mt: 2, borderRadius: "50%" }}>
-                                    <Image
-                                        src=''
-                                        alt="Picture of the logo"
-                                        width={50}
-                                        height={50}
-
-
-                                    />
-                                </Box>
-
-
+                                <Typography
+                                    variant="h6"
+                                    component="div"
+                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 3 }}
+                                >
+                                    Fakhry
+                                </Typography>
                                 <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                                    <List sx={{ display: "flex", justifyContent: "space-around", alignItems: "center" }}>
-                                        <ListItem>
-                                            <a href="#home">
-                                                <ListItemButton >
-                                                    <HomeIcon sx={{ color: "secondary.main", width: "30px", height: "30px" }} />
-                                                </ListItemButton>
-                                            </a>
-                                        </ListItem>
+
+                                    <List sx={{ display: "flex" }}>
                                         <ListItem>
                                             <a href="#about">
-                                                <ListItemButton sx={{ textAlign: 'center' }}>
-                                                    <ListItemText primary="About" sx={{ color: "text.primary" }} />
-                                                </ListItemButton>
+                                                <ListItemText primary="ABOUT" sx={{ color: "text.primary" }} />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#skills">
-                                                <ListItemButton sx={{ textAlign: 'center' }}>
-                                                    <ListItemText primary="Skills" sx={{ color: "text.primary" }} />
-                                                </ListItemButton>
+                                                <ListItemText primary="SKILLS" sx={{ color: "text.primary" }} />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#projects">
-                                                <ListItemButton sx={{ textAlign: 'center' }}>
-                                                    <ListItemText primary="Projects" sx={{ color: "text.primary" }} />
-                                                </ListItemButton>
+                                                <ListItemText primary="PROJECTS" sx={{ color: "text.primary" }} />
+                                            </a>
+                                        </ListItem>
+                                        <ListItem>
+                                            <a href="#papers">
+                                                <ListItemText primary="PAPERS" sx={{ color: "text.primary" }} />
+                                            </a>
+                                        </ListItem>
+                                        <ListItem>
+                                            <a href="#projects">
+                                                <ListItemText primary="TIMELINE" sx={{ color: "text.primary" }} />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#contact">
-                                                <ListItemButton sx={{ textAlign: 'center' }}>
-                                                    <ListItemText primary="Contact" sx={{ color: "text.primary" }} />
-                                                </ListItemButton>
+                                                <ListItemText primary="Contact" sx={{ color: "text.primary" }} />
+                                            </a>
+                                        </ListItem>
+                                        <ListItem>
+                                            <a href="#contact">
+                                                <ListItemText primary="RESUNE" sx={{ color: "text.primary" }} />
+                                            </a>
+                                        </ListItem>
+                                        <ListItem>
+                                            <a href="#contact">
+                                                <ListItemText primary="THESIS" sx={{ color: "text.primary" }} />
                                             </a>
                                         </ListItem>
                                         <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-                                            {theme.palette.mode === 'dark' ? <LightModeIcon /> : <NightlightRoundIcon />}
+                                            {theme.palette.mode === 'dark' ? <LightModeIcon /> : <NightlightRoundIcon sx={{ color: "text.primary" }} />}
                                         </IconButton>
                                     </List>
-
-
-
                                 </Box>
 
                             </Box>
