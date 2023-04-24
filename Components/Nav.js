@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles';
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AppBar from '@mui/material/AppBar';
@@ -59,6 +60,16 @@ const drawerWidth = 240;
 //     children: PropTypes.element.isRequired,
 //     window: PropTypes.func,
 // };
+const useStyles = makeStyles((theme) => ({
+    appBarTransparent: {
+        backgroundColor: 'transparent',
+
+    },
+    appBarSolid: {
+        backgroundColor: '#424242',
+
+    }
+}));
 
 
 function Nav() {
@@ -69,6 +80,29 @@ function Nav() {
         setMobileOpen((prevState) => !prevState);
     };
 
+
+    // Transparent to Solid Header on Scroll
+    const classes = useStyles();
+    const [navBackground, setNavBackground] = useState('appBarTransparent')
+    const navRef = React.useRef()
+    navRef.current = navBackground;
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 310
+            if (show) {
+                setNavBackground('appBarSolid')
+            } else {
+                setNavBackground('appBarTransparent')
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{
             textAlign: 'center', backgroundColor: "background.main",
@@ -77,7 +111,6 @@ function Nav() {
 
             <IconButton >
                 <CloseIcon sx={{ color: "secondary.main", position: "absolute", left: "90px" }} />
-
             </IconButton>
             {/* 
             <Typography variant="h6" sx={{ my: 2 }}>
@@ -135,64 +168,63 @@ function Nav() {
             <Box sx={{ display: 'flex' }} >
                 <CssBaseline />
                 {/* <HideOnScroll {...props}> */}
-                <AppBar variant="permanent" sx={{
+                <AppBar variant="permanent" position="fixed" sx={{
                     background: 'transparent', color: "text:primary", borderStyle: "none"
-                }} className="animate__animated animate__fadeInDown">
+                }} className={classes[navRef.current]}>
                     <Container>
                         <Toolbar>
                             <Box display='flex' flexGrow={1}>
                                 <Typography
-                                    variant="h6"
-                                    component="div"
-                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 3 }}
+                                    variant="h4"
+                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", fontWeight: "bolder", mt: 1 }}
                                 >
-                                    Fakhry
+                                    Ahmed Fakhry
                                 </Typography>
                                 <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 
                                     <List sx={{ display: "flex" }}>
                                         <ListItem>
                                             <a href="#about">
-                                                <ListItemText primary="ABOUT" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="ABOUT" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#skills">
-                                                <ListItemText primary="SKILLS" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="SKILLS" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#projects">
-                                                <ListItemText primary="PROJECTS" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="PROJECTS" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#papers">
-                                                <ListItemText primary="PAPERS" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="PAPERS" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#projects">
-                                                <ListItemText primary="TIMELINE" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="TIMELINE" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#contact">
-                                                <ListItemText primary="Contact" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="Contact" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#contact">
-                                                <ListItemText primary="RESUNE" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="RESUNE" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
                                             <a href="#contact">
-                                                <ListItemText primary="THESIS" sx={{ color: "text.primary" }} />
+                                                <ListItemText primary="THESIS" />
                                             </a>
                                         </ListItem>
                                         <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-                                            {theme.palette.mode === 'dark' ? <LightModeIcon /> : <NightlightRoundIcon sx={{ color: "text.primary" }} />}
+                                            {theme.palette.mode === 'dark' ? <LightModeIcon sx={{ color: "secondary.main" }} /> : <NightlightRoundIcon sx={{ color: "text.primary" }} />}
                                         </IconButton>
                                     </List>
                                 </Box>

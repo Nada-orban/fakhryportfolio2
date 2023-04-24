@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from '@mui/material/styles';
-import { lightGreen, green, brown, grey, lime, red, blue } from '@mui/material/colors';
+import { lightGreen, green, brown, grey, lime, red, blue, amber } from '@mui/material/colors';
 import { fontSize } from "@mui/system";
 
 export const themeSettongs = (mode) => {
@@ -13,7 +13,7 @@ export const themeSettongs = (mode) => {
                 },
                 secondary: {
                     // main: red[400],
-                    main: "#dc965a"
+                    main: amber[700],
                 },
                 neutral: {
                     greenlight: green[300],
@@ -41,7 +41,7 @@ export const themeSettongs = (mode) => {
                 },
                 secondary: {
                     // main: red[400],
-                    main: "#dc965a"
+                    main: amber[700],
                 },
                 neutral: {
                     brownlight: brown[200],
@@ -79,10 +79,10 @@ export const ColorModeContext = createContext({
 });
 
 export const useMode = () => {
-    const [mode, setMode] = useState("dark");
+    const [mode, setMode] = useState("light");
     const colorMode = useMemo(() => ({
         toggleColorMode: () => {
-            setMode((prev) => (prev === "dark" ? "light" : "dark"))
+            setMode((prev) => (prev === "light" ? "dark" : "light"))
         }
     }), []);
     const theme = useMemo(() => createTheme(themeSettongs(mode)), [mode]);

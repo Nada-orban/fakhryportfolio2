@@ -25,7 +25,8 @@ function Landing() {
 
                         />
                     </Box>
-                    <Typography variant='h2'>FAKHRY</Typography>
+                    <Typography variant='h2' sx={{ color: "white" }}>FAKHRY</Typography>
+                    <Typography variant='h6' sx={{ color: "white" }}>Software Engineer @ Google - Grad Student - AI/ML Researcher</Typography>
 
                 </Box>
             </Box>
