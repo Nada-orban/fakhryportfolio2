@@ -16,16 +16,16 @@ function Landing() {
             <Box className={styles.overlay}>
                 <Nav />
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", pt: "30vh" }}>
-                    <Box border="1px solid white" borderRadius="50%" width="200px" height="200px" overflow="hidden" margin="auto" >
+                    <Box border="4px solid white" borderRadius="50%" width="250px" height="250px" overflow="hidden" margin="auto" >
                         <Image
                             src={profile}
                             alt="Picture of the author"
-                            width={200}
-                            height={400}
+                            width={250}
+                            height={250}
 
                         />
                     </Box>
-                    <Typography variant='h2' sx={{ color: "white" }}>FAKHRY</Typography>
+                    <Typography variant='h2' sx={{ color: "white", mt: "30px" }}>FAKHRY</Typography>
                     <Typography variant='h6' sx={{ color: "white" }}>Software Engineer @ Google - Grad Student - AI/ML Researcher</Typography>
 
                 </Box>

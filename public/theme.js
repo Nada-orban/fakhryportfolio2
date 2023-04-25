@@ -31,7 +31,7 @@ export const themeSettongs = (mode) => {
                 },
                 text: {
                     primary: 'black',
-                    secondary: grey[500],
+                    secondary: grey[800],
                 },
 
 
@@ -58,7 +58,7 @@ export const themeSettongs = (mode) => {
                     // secondary: " #1d1d1d"
                 }, text: {
                     primary: "white",
-                    secondary: grey[500],
+                    secondary: grey[400],
                 },
 
             }),
