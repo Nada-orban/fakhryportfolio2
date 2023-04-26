@@ -134,19 +134,18 @@ function Nav() {
                 <CssBaseline />
                 {/* <HideOnScroll {...props}> */}
                 <AppBar variant="permanent" position="fixed" sx={{
-                    background: 'transparent', color: "text:primary", borderStyle: "none"
+                    background: 'transparent', color: "text:primary", borderStyle: "none", height: "60px"
                 }} className={classes[navRef.current]} >
                     <Container>
                         <Toolbar>
                             <Box display='flex' flexGrow={1}>
                                 <Typography
                                     variant="h4"
-                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1 }}
+                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", }}
                                 >
                                     Ahmed Fakhry
                                 </Typography>
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
-
                                     <List sx={{ display: "flex" }}>
                                         <ListItem>
                                             <a href="#about">
@@ -215,13 +214,13 @@ function Nav() {
                                     sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "secondary.main", borderRadius: "10px", mt: 1, display: "flex" }}
                                     className={Styles.menuButton}
                                 >
-                                    <Typography variant='h6' sx={{ color: "black" }}>Menu</Typography>
+                                    {/* <Typography variant='h6' sx={{ color: "black" }}>MENU</Typography> */}
 
                                     <MenuIcon sx={{ color: "black" }} />
                                 </IconButton>
                             </Box>
                         </Toolbar>
-                        <Box>
+                        <Box className={Styles.menuBox}>
                             {open && (
                                 <List >
                                     <ListItem>
