@@ -6,6 +6,7 @@ import Landing from '../../Components/Landing'
 import About from '../../Components/About'
 import Skill from '../../Components/Skill'
 import Projects from '../../Components/Projects'
+import Papers from '../../Components/Papers'
 
 
 
@@ -26,6 +27,7 @@ export default function Home() {
       <About />
       <Skill />
       <Projects />
+      <Papers />
 
     </>
   )

@@ -6,8 +6,10 @@ import { styled, useTheme, alpha } from '@mui/material/styles'
 import AdjustIcon from '@mui/icons-material/Adjust';
 
 function Skill() {
+    const colorMode = React.useContext(ColorModeContext);
+    const theme = useTheme();
     return (
-        <Box id="skill" backgroundColor="#2988bc" color="white" py="50px">
+        <Box id="skill" backgroundColor="background.secondary" color="white" py="50px">
             <Container>
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold" }}>SKILLS</Typography>
                 <Typography variant='h6' sx={{ textAlign: "center" }}>Below are some of my skills, and I'm always looking to learn more.</Typography>

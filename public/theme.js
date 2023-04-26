@@ -26,12 +26,13 @@ export const themeSettongs = (mode) => {
                 },
                 background: {
                     main: "#fff",
-                    secondary: "#fff5ec"
+                    secondary: "#2988bc"
                     // main: "rgb(52, 71, 103)",
                 },
                 text: {
                     primary: 'black',
                     secondary: grey[800],
+
                 },
 
 
@@ -55,7 +56,7 @@ export const themeSettongs = (mode) => {
                 background: {
                     main: "#1c1d24 ",
                     secondary: "black"
-                    // secondary: " #1d1d1d"
+
                 }, text: {
                     primary: "white",
                     secondary: grey[400],

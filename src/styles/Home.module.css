@@ -70,3 +70,12 @@
   color: white;
   border-radius: 10px;
 }
+
+
+/*############Papers############ */
+.linkText:hover{
+  text-decoration: underline var(--secondary-color);
+}
+.iconLink:hover{
+  color: #c7933a;
+}
