@@ -27,7 +27,7 @@ function About() {
                         <div data-aos="zoom-in"
                             data-aos-mirror="true"
                         >
-                            <Box width="300px" height="300px" border="3px solid white" borderRadius="50%" overflow="hidden" mt="50px"  >
+                            <Box width="300px" height="300px" border="3px solid white" borderRadius="50%" overflow="hidden" mt="50px" margin="auto" >
                                 <Image
                                     src={profile}
                                     alt="Picture of the author"
