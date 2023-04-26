@@ -10,6 +10,10 @@ function Papers() {
     const theme = useTheme();
     return (
         <Box id="papers">
+            <Container>
+                <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold" }}>SKILLS</Typography>
+                <Typography variant='h6' sx={{ textAlign: "center" }}>Below are some of my skills, and I'm always looking to learn more.</Typography>
+            </Container>
 
         </Box>
     )

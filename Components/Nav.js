@@ -141,7 +141,7 @@ function Nav() {
                             <Box display='flex' flexGrow={1}>
                                 <Typography
                                     variant="h4"
-                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", }}
+                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1.5, fontSize: "25px" }}
                                 >
                                     Ahmed Fakhry
                                 </Typography>
@@ -174,7 +174,7 @@ function Nav() {
                                         </ListItem>
                                         <ListItem>
                                             <a href="#contact">
-                                                <ListItemText primary="Contact" />
+                                                <ListItemText primary="CONTACT" />
                                             </a>
                                         </ListItem>
                                         <ListItem>
@@ -250,7 +250,7 @@ function Nav() {
                                     </ListItem>
                                     <ListItem>
                                         <a href="#contact">
-                                            <ListItemText primary="Contact" />
+                                            <ListItemText primary="CONTACT" />
                                         </a>
                                     </ListItem>
                                     <ListItem>
