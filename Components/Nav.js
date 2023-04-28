@@ -38,29 +38,65 @@ import Styles from '../src/styles/Nav.module.css'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { NodeNextRequest } from 'next/dist/server/base-http/node';
+import PropTypes from 'prop-types';
 
 
 const drawerWidth = 240;
 
 
 
-//hide navbar
-// function HideOnScroll(props) {
-//     const { children, window } = props;
-//     const trigger = useScrollTrigger({
-//         target: window ? window() : undefined,
-//     });
+//scroll top
+function ScrollTop(props) {
+    const { children, window } = props;
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+        target: window ? window() : undefined,
+        disableHysteresis: true,
+        threshold: 100,
+    });
 
-//     return (
-//         <Slide appear={false} direction="down" in={!trigger}>
-//             {children}
-//         </Slide>
-//     );
-// }
-// HideOnScroll.propTypes = {
-//     children: PropTypes.element.isRequired,
-//     window: PropTypes.func,
-// };
+    const handleClick = (event) => {
+        const anchor = (event.target.ownerDocument || document).querySelector(
+            '#back-to-top-anchor',
+        );
+
+        if (anchor) {
+            anchor.scrollIntoView({
+                block: 'center',
+            });
+        }
+    };
+
+    return (
+        <Fade in={trigger}>
+            <Box
+                onClick={handleClick}
+                role="presentation"
+                sx={{ position: 'fixed', bottom: 16, right: 16 }}
+            >
+                {children}
+            </Box>
+        </Fade>
+    );
+}
+
+ScrollTop.propTypes = {
+    children: PropTypes.element.isRequired,
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+};
+
+
+
+
+
+
+
 const useStyles = makeStyles((theme) => ({
     appBarTransparent: {
         backgroundColor: 'transparent',
@@ -73,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Nav() {
+function Nav(props) {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -107,6 +143,8 @@ function Nav() {
 
 
 
+
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
@@ -132,7 +170,7 @@ function Nav() {
         <>
             <Box sx={{ display: 'flex' }} >
                 <CssBaseline />
-                {/* <HideOnScroll {...props}> */}
+
                 <AppBar variant="permanent" position="fixed" sx={{
                     background: 'transparent', color: "text:primary", borderStyle: "none", height: "60px"
                 }} className={classes[navRef.current]} >
@@ -147,37 +185,37 @@ function Nav() {
                                 </Typography>
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#about">
                                                 <ListItemText primary="ABOUT" />
                                             </a>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#skills">
                                                 <ListItemText primary="SKILLS" />
                                             </a>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#projects">
                                                 <ListItemText primary="PROJECTS" />
                                             </a>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#papers">
                                                 <ListItemText primary="PAPERS" />
                                             </a>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#projects">
                                                 <ListItemText primary="TIMELINE" />
                                             </a>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#contact">
                                                 <ListItemText primary="CONTACT" />
                                             </a>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink}>
                                             <a href="#contact">
                                                 <ListItemText primary="RESUME" />
                                             </a>
@@ -196,7 +234,8 @@ function Nav() {
                     </Container>
 
                 </AppBar>
-                {/* mobile view */}
+                <Toolbar id="back-to-top-anchor" />
+                {/* mobile view 1*/}
 
                 <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "#212529" }}>
                     <Container>
@@ -268,16 +307,18 @@ function Nav() {
                     </Container>
                 </AppBar>
 
-                {/* </HideOnScroll> */}
+
+
+
 
 
             </Box >
-            {/* <ScrollTop {...props}>
-                <Fab size="small" aria-label="scroll back to top">
+            <ScrollTop {...props}>
+                <Fab size="small" aria-label="scroll back to top" >
                     <KeyboardArrowUpIcon />
                 </Fab>
 
-            </ScrollTop> */}
+            </ScrollTop>
 
         </>
     )

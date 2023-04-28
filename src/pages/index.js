@@ -7,6 +7,8 @@ import About from '../../Components/About'
 import Skill from '../../Components/Skill'
 import Projects from '../../Components/Projects'
 import Papers from '../../Components/Papers'
+import Contact from '../../Components/Contact'
+import TimelineSection from '../../Components/TimelineSection'
 
 
 
@@ -28,6 +30,9 @@ export default function Home() {
       <Skill />
       <Projects />
       <Papers />
+      <TimelineSection />
+      <Contact />
+
 
     </>
   )

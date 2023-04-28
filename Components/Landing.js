@@ -16,7 +16,7 @@ function Landing() {
             <Box className={styles.overlay}>
                 <Nav />
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", pt: "30vh" }}>
-                    <Box border="4px solid white" borderRadius="50%" width="250px" height="250px" overflow="hidden" margin="auto" >
+                    <Box border="6px solid white" borderRadius="50%" width="250px" height="250px" overflow="hidden" margin="auto" >
                         <Image
                             src={profile}
                             alt="Picture of the author"

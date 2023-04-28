@@ -4,6 +4,10 @@
     color: black;
 
 }
+.navLink:hover, .navLink:active{
+    color: var(--secondary-color);
+
+}
 
 
 
