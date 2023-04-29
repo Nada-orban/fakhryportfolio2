@@ -9,6 +9,7 @@ import Projects from '../../Components/Projects'
 import Papers from '../../Components/Papers'
 import Contact from '../../Components/Contact'
 import TimelineSection from '../../Components/TimelineSection'
+import Footer from '../../Components/Footer'
 
 
 
@@ -32,6 +33,7 @@ export default function Home() {
       <Papers />
       <TimelineSection />
       <Contact />
+      <Footer />
 
 
     </>

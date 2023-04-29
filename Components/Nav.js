@@ -206,7 +206,7 @@ function Nav(props) {
                                             </a>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#projects">
+                                            <a href="#timeline">
                                                 <ListItemText primary="TIMELINE" />
                                             </a>
                                         </ListItem>
@@ -283,7 +283,7 @@ function Nav(props) {
                                         </a>
                                     </ListItem>
                                     <ListItem>
-                                        <a href="#projects">
+                                        <a href="#timeline">
                                             <ListItemText primary="TIMELINE" />
                                         </a>
                                     </ListItem>

@@ -14,7 +14,7 @@ function Projects() {
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold" }}>Personal Projects</Typography>
                 <Typography variant='h6' sx={{ textAlign: "center" }}>Here you can see some of the projects I've done on my own time.</Typography>
 
-                <Grid container sx={{ my: "50px" }}>
+                <Grid container sx={{ my: "50px" }} spacing={3}>
                     <Grid item xs={12} md={4}>
                         <Box className={styles.projectBox}>
                             <Typography variant='h5' sx={{ color: "secondary.main" }}>Project Title</Typography>

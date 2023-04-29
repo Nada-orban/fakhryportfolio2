@@ -26,7 +26,7 @@ function TimelineSection() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box id="skill" py="60px">
+        <Box id="timeline" py="60px">
             <Container>
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold" }}>Timeline</Typography>
                 <Typography variant='h6' sx={{ textAlign: "center" }}>A short summary of my work experience..</Typography>

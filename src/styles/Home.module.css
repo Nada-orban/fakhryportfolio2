@@ -42,7 +42,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 'center';
-  background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),url(../../public/assets//ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg);
+  background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),url(../../public/assets/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg);
   width: 100%;
   height: 250px;
   padding: 50px 20px;
@@ -82,6 +82,14 @@
 
 /*############contact ############*/
 .contactBox{
+  text-align: center;
+  color: white;
+  background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),
+  url(../../public/assets/close-up-man-checking-mobile.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
   
 
 }
