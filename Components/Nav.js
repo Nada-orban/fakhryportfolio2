@@ -146,7 +146,7 @@ function Nav(props) {
 
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', }}>
             <Typography variant="h6" sx={{ my: 2 }}>
                 MUI
             </Typography>
@@ -183,6 +183,15 @@ function Nav(props) {
                                 >
                                     Ahmed Fakhry
                                 </Typography>
+                                {/* <IconButton
+                                    color="inherit"
+                                    aria-label="open drawer"
+                                    edge="start"
+                                    onClick={handleDrawerToggle}
+                                    sx={{ mr: 2, display: { sm: 'none' } }}
+                                >
+                                    <MenuIcon />
+                                </IconButton> */}
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
                                         <ListItem className={Styles.navLink}>
@@ -235,6 +244,24 @@ function Nav(props) {
 
                 </AppBar>
                 <Toolbar id="back-to-top-anchor" />
+                {/* <Box component="nav">
+                    <Drawer
+
+                        variant="temporary"
+                        open={mobileOpen}
+                        onClose={handleDrawerToggle}
+                        ModalProps={{
+                            keepMounted: true, // Better open performance on mobile.
+                        }}
+                        sx={{
+                            display: { xs: 'block', sm: 'none' },
+                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+
+                        }}
+                    >
+                        {drawer}
+                    </Drawer>
+                </Box> */}
                 {/* mobile view 1*/}
 
                 <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "#212529" }}>

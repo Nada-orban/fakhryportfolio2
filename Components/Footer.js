@@ -10,27 +10,31 @@ function Footer() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box id="footer">
-            <Container>
-                <Grid container spacing={4} sx={{ my: "20px", }}>
-                    <Grid item xs={12} md={6}>
-                        <Typography variant='h6' sx={{ mt: 2, textAlign: "center" }}>Copyright © Nada Orban 2023</Typography>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Box display="flex" justifyContent="center" alignItems="center" gap="20px">
-                            <Link href="" ><Avatar sx={{ width: "60px", height: "60px", backgroundColor: "background.secondary", }}><FiFacebook /></Avatar></Link>
-                            <Link href="" ><Avatar sx={{ width: "60px", height: "60px", backgroundColor: "background.secondary", }}><FiLinkedin /></Avatar></Link>
-                            <Link href="" ><Avatar sx={{ width: "60px", height: "60px", backgroundColor: "background.secondary", }}><FiGithub /></Avatar></Link>
-                        </Box>
+        <Box id="footer" >
 
+            {/* <Box display="flex" justifyContent="space-between" alignItems="center" gap="20px" padding="10px">
+                    <Typography variant='h6' sx={{ textAlign: "center" }}>Copyright © Nada Samir 2023</Typography>
+                    <Box display="flex" justifyContent="center" alignItems="center" gap="20px">
+                        <Link href="" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "background.secondary", }}><FiFacebook /></Avatar></Link>
+                        <Link href="" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "background.secondary", }}><FiLinkedin /></Avatar></Link>
+                        <Link href="" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "background.secondary", }}><FiGithub /></Avatar></Link>
+                    </Box>
 
+                </Box> */}
+            <Grid container spacing={4} sx={{ my: "0px", padding: "10px" }}>
 
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-
-                    </Grid>
+                <Grid xs={12} md={6}>
+                    <Typography variant='h6' sx={{ textAlign: "center" }}>Copyright © Nada Samir 2023</Typography>
                 </Grid>
-            </Container>
+                <Grid xs={12} md={6}>
+                    <Box display="flex" justifyContent="center" alignItems="center" gap="20px" >
+                        <Link href="" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "background.secondary", }}><FiFacebook /></Avatar></Link>
+                        <Link href="" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "background.secondary", }}><FiLinkedin /></Avatar></Link>
+                        <Link href="" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "background.secondary", }}><FiGithub /></Avatar></Link>
+                    </Box>
+                </Grid>
+            </Grid>
+
         </Box>
     )
 }

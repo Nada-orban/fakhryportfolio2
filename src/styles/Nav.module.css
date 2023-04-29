@@ -8,6 +8,17 @@
     color: var(--secondary-color);
 
 }
+.menuBox{
+    /* transition: all 1s ease 0s,visibility 0s linear .3s;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    left: 0px;
+    transform: translateY(-100px); */
+    
+
+
+}
 
 
 
