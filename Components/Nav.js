@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AppBar from '@mui/material/AppBar';
@@ -39,6 +39,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { NodeNextRequest } from 'next/dist/server/base-http/node';
 import PropTypes from 'prop-types';
+import { Link } from 'react-scroll'
 
 
 const drawerWidth = 240;
@@ -97,16 +98,16 @@ ScrollTop.propTypes = {
 
 
 
-const useStyles = makeStyles((theme) => ({
-    appBarTransparent: {
-        backgroundColor: 'transparent',
+// const useStyles = makeStyles((theme) => ({
+//     appBarTransparent: {
+//         backgroundColor: 'transparent',
 
-    },
-    appBarSolid: {
-        backgroundColor: '#212529',
+//     },
+//     appBarSolid: {
+//         backgroundColor: '#212529',
 
-    }
-}));
+//     }
+// }));
 
 
 function Nav(props) {
@@ -120,24 +121,24 @@ function Nav(props) {
 
 
     // Transparent to Solid Header on Scroll
-    const classes = useStyles();
-    const [navBackground, setNavBackground] = useState('appBarTransparent')
-    const navRef = React.useRef()
-    navRef.current = navBackground;
-    useEffect(() => {
-        const handleScroll = () => {
-            const show = window.scrollY > 310
-            if (show) {
-                setNavBackground('appBarSolid')
-            } else {
-                setNavBackground('appBarTransparent')
-            }
-        }
-        document.addEventListener('scroll', handleScroll)
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+    // const classes = useStyles();
+    // const [navBackground, setNavBackground] = useState('appBarTransparent')
+    // const navRef = React.useRef()
+    // navRef.current = navBackground;
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const show = window.scrollY > 310
+    //         if (show) {
+    //             setNavBackground('appBarSolid')
+    //         } else {
+    //             setNavBackground('appBarTransparent')
+    //         }
+    //     }
+    //     document.addEventListener('scroll', handleScroll)
+    //     return () => {
+    //         document.removeEventListener('scroll', handleScroll)
+    //     }
+    // }, [])
 
 
 
@@ -164,7 +165,7 @@ function Nav(props) {
 
 
 
-
+    //className={classes[navRef.current]}
 
     return (
         <>
@@ -173,7 +174,7 @@ function Nav(props) {
 
                 <AppBar variant="permanent" position="fixed" sx={{
                     background: 'transparent', color: "text:primary", borderStyle: "none", height: "60px"
-                }} className={classes[navRef.current]} >
+                }}  >
                     <Container>
                         <Toolbar>
                             <Box display='flex' flexGrow={1}>
@@ -195,34 +196,34 @@ function Nav(props) {
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#about">
+                                            <Link to="about" spy={true} smooth={true} offset={-100} duration={500} >
                                                 <ListItemText primary="ABOUT" />
-                                            </a>
+                                            </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#skills">
+                                            <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} >
                                                 <ListItemText primary="SKILLS" />
-                                            </a>
+                                            </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#projects">
+                                            <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} >
                                                 <ListItemText primary="PROJECTS" />
-                                            </a>
+                                            </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#papers">
+                                            <Link to="papers" spy={true} smooth={true} offset={-100} duration={500} >
                                                 <ListItemText primary="PAPERS" />
-                                            </a>
+                                            </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#timeline">
+                                            <Link to="timeline" spy={true} smooth={true} offset={-110} duration={500} >
                                                 <ListItemText primary="TIMELINE" />
-                                            </a>
+                                            </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#contact">
+                                            <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} >
                                                 <ListItemText primary="CONTACT" />
-                                            </a>
+                                            </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
                                             <a href="#contact">
