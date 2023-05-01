@@ -296,29 +296,29 @@ function Nav(props) {
                                         </a>
                                     </ListItem>
                                     <ListItem>
-                                        <a href="#skills">
+                                        <Link href="#skills">
                                             <ListItemText primary="SKILLS" />
-                                        </a>
+                                        </Link>
                                     </ListItem>
                                     <ListItem>
-                                        <a href="#projects">
+                                        <Link href="#projects">
                                             <ListItemText primary="PROJECTS" />
-                                        </a>
+                                        </Link>
                                     </ListItem>
                                     <ListItem>
-                                        <a href="#papers">
+                                        <Link href="#papers">
                                             <ListItemText primary="PAPERS" />
-                                        </a>
+                                        </Link>
                                     </ListItem>
                                     <ListItem>
-                                        <a href="#timeline">
+                                        <Link href="#timeline">
                                             <ListItemText primary="TIMELINE" />
-                                        </a>
+                                        </Link>
                                     </ListItem>
                                     <ListItem>
-                                        <a href="#contact">
+                                        <Link href="#contact">
                                             <ListItemText primary="CONTACT" />
-                                        </a>
+                                        </Link>
                                     </ListItem>
                                     <ListItem>
                                         <a href="#contact">
